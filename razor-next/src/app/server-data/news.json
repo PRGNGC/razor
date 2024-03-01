@@ -1,0 +1,108 @@
+{
+    "news": 
+    [
+        {
+            "title": "THE ULTIMATE 14” GAMING LAPTOP",
+            "text": "Gaming Laptop with AMD Ryzen™ 6900HX",
+            "type": "LAPTOP",
+            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
+            "size": 1
+        },
+        {
+            "title": "TWITCHCON SAN DIEGO 2022",
+            "text": "We`ll see you there",
+            "type": "EVENT",
+            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
+            "size": 1
+        },
+        {
+            "title": "THE ULTIMATE 14” GAMING LAPTOP 2022",  
+            "text": "Gaming Laptop with AMD Ryzen™ 6900HX",
+            "type": "LAPTOP",
+            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
+            "size": 2
+        },
+        {
+            "title": "RAZERSTORE REWARDS",
+            "text": "US$10 off* and a bonus of 1,000 Razer Silver",
+            "type": "EVENT",
+            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
+            "size": 2
+        },
+        {
+            "title": "RAZER NOMAD DUFFEL BAG",
+            "text": "PACK TO CONQUER",
+            "type": "LIFESTYLE",
+            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
+            "size": 1
+        },
+        {
+            "title": "RAZER DEATHSTALKER V2 PRO",
+            "text": "A wireless ultra-slim optical keyboard",
+            "type": "KEYBOARD",
+            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
+            "size": 1
+        },
+        {
+            "title": "Laptop Products",
+            "text": "Laptop Products",
+            "type": "LAPTOP",
+            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
+            "size": 1
+        },
+        {
+            "title": "Audio Products",
+            "text": "Audio Products",
+            "type": "AUDIO",
+            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
+            "size": 1
+        },
+        {
+            "title": "Components Products",  
+            "text": "Components Products",
+            "type": "COMPONENT",
+            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
+            "size": 2
+        },
+        {
+            "title": "Keyboards Products",
+            "text": "Keyboards Products",
+            "type": "KEYBOARD",
+            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
+            "size": 2
+        },
+        {
+            "title": "Console Products",
+            "text": "Console Products",
+            "type": "CONSOLE",
+            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
+            "size": 2
+        },
+        {
+            "title": "Streaming Products",
+            "text": "Streaming Products",
+            "type": "STREAMING",
+            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
+            "size": 1
+        },
+        {
+            "title": "Mobile Products",
+            "text": "Mobile Products",
+            "type": "MOBILE",
+            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
+            "size": 2
+        },
+        {
+            "title": "Gear Products",
+            "text": "Gear Products",
+            "type": "GEAR",
+            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
+            "size": 1
+        }
+    ], 
+    "advertisements": [
+        {
+            "tit": "adv"
+        }
+    ]
+}
