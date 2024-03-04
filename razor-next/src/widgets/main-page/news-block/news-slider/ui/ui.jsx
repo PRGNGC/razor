@@ -1,7 +1,6 @@
 'use client'
-import axios from "axios";
 import { useState, useEffect } from "react";
-import { SliderTemplate } from "@/features/news-block/slider";
+import { SliderTemplate } from "@/features/slider";
 import styles from './styles.module.scss'
 import Link from "next/link";
 import { getNews } from "../api";
@@ -9,12 +8,16 @@ import { getNews } from "../api";
 export function NewsSlider(){
     const [news, setNews] = useState([]);
  
+    
     async function FetchData(){
         const response = await getNews();
         setNews(response)
     }
     
-    FetchData()
+    useEffect(() => {
+        FetchData()
+    }, [])
+
 
     const maxCapacity = 4;
     let pagesCount = new Array(Math.ceil(news.reduce((sum, current) => sum + current.size, 0) / maxCapacity)).fill(1);
@@ -29,7 +32,8 @@ export function NewsSlider(){
                         {
                             news.map(i => {
                                 return(
-                                    <div key={crypto.randomUUID()} className={styles.newCard} style={{backgroundImage: 'url(' + i.img + ')'}}>
+                                    // <div key={crypto.randomUUID()} className={styles.newCard} >
+                                    <div key={crypto.randomUUID()} className={styles.newCard} style={{backgroundImage: 'url(' + i.img + ')'}}> 
                                         <Link href='/' className={styles.cardLink} />
                                         <div className={styles.newType}>{i.type}</div>
                                         <h1 className={styles.newTitle}>{i.title}</h1>

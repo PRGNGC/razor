@@ -20,9 +20,9 @@
         overflow-y: hidden;
     }
     .otherProduct{
-        width: 190px;
+        width: 230px;
         border-radius: 20px;
-        height: 120px;
+        height: 160px;
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -56,17 +56,4 @@
             height: 100%;
         }
     }
-    .firstOtherProduct{
-        background-image: url(../../../../shared/ui/images/another-product-1.png);
-        // background-image: url(../assets/another-product-1.png);
-    }
-    .secondOtherProduct{
-        background-image: url(../../../../shared/ui/images/another-product-2.png);
-        // background-image: url(../assets/another-product-2.png);
-    }
-    .thirdOtherProduct{
-        background-image: url(../../../../shared/ui/images/another-product-3.png);
-        // background-image: url(../assets/another-product-3.png);
-    }
-    
 }

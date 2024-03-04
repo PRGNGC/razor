@@ -5,104 +5,162 @@
             "title": "THE ULTIMATE 14” GAMING LAPTOP",
             "text": "Gaming Laptop with AMD Ryzen™ 6900HX",
             "type": "LAPTOP",
-            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
             "size": 1
         },
         {
             "title": "TWITCHCON SAN DIEGO 2022",
             "text": "We`ll see you there",
             "type": "EVENT",
-            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
             "size": 1
         },
         {
             "title": "THE ULTIMATE 14” GAMING LAPTOP 2022",  
             "text": "Gaming Laptop with AMD Ryzen™ 6900HX",
             "type": "LAPTOP",
-            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
             "size": 2
         },
         {
             "title": "RAZERSTORE REWARDS",
             "text": "US$10 off* and a bonus of 1,000 Razer Silver",
             "type": "EVENT",
-            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
             "size": 2
         },
         {
             "title": "RAZER NOMAD DUFFEL BAG",
             "text": "PACK TO CONQUER",
             "type": "LIFESTYLE",
-            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
             "size": 1
         },
         {
             "title": "RAZER DEATHSTALKER V2 PRO",
             "text": "A wireless ultra-slim optical keyboard",
             "type": "KEYBOARD",
-            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
             "size": 1
         },
         {
             "title": "Laptop Products",
             "text": "Laptop Products",
             "type": "LAPTOP",
-            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
             "size": 1
         },
         {
             "title": "Audio Products",
             "text": "Audio Products",
             "type": "AUDIO",
-            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
             "size": 1
         },
         {
             "title": "Components Products",  
             "text": "Components Products",
             "type": "COMPONENT",
-            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
             "size": 2
         },
         {
             "title": "Keyboards Products",
             "text": "Keyboards Products",
             "type": "KEYBOARD",
-            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
             "size": 2
         },
         {
             "title": "Console Products",
             "text": "Console Products",
             "type": "CONSOLE",
-            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
             "size": 2
         },
         {
             "title": "Streaming Products",
             "text": "Streaming Products",
             "type": "STREAMING",
-            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
             "size": 1
         },
         {
             "title": "Mobile Products",
             "text": "Mobile Products",
             "type": "MOBILE",
-            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
             "size": 2
         },
         {
             "title": "Gear Products",
             "text": "Gear Products",
             "type": "GEAR",
-            "img": "http://localhost:3000/src/shared/ui/images/news-img-1.png",
             "size": 1
         }
     ], 
     "advertisements": [
         {
             "tit": "adv"
+        }
+    ],
+    "exclusives": [
+        {
+            "deviceType": "AUDIO",
+            "deviceAddInfo": "-50% off",
+            "devicePriceOff": true,
+            "deviceExclusive": false,
+            "deviceNew": false,
+            "deviceOtherInfo": false,
+            "deviceImg": "headphones",
+            "deviceRating": "4.5",
+            "deviceReviewsCount": "556",
+            "deviceTitle": "Razer BlackShark V2 CouRageJD Edition",
+            "deviceActualPrice": "$54.99",
+            "deviceOldPrice": "$109.99"
+        },
+        {
+            "deviceType": "LAPTOP",
+            "deviceAddInfo": "-8% off",
+            "devicePriceOff": true,
+            "deviceExclusive": false,
+            "deviceNew": false,
+            "deviceOtherInfo": false,
+            "deviceImg": "laptop",
+            "deviceRating": "4.7",
+            "deviceReviewsCount": "287",
+            "deviceTitle": "Razer Blade 15 Base Model - QHD 165Hz - GeForce RTX 3070 - Black",
+            "deviceActualPrice": "$2,099.99",
+            "deviceOldPrice": "$2,299.99"
+        },
+        {
+            "deviceType": "CONSOLE",
+            "deviceAddInfo": "-45% off",
+            "devicePriceOff": true,
+            "deviceExclusive": false,
+            "deviceNew": false,
+            "deviceOtherInfo": false,
+            "deviceImg": "console",
+            "deviceRating": "4.2",
+            "deviceReviewsCount": "1021",
+            "deviceTitle": "Razer Kishi for Android (Xbox)",
+            "deviceActualPrice": "$54.99",
+            "deviceOldPrice": "$99.99"
+        },
+        {
+            "deviceType": "CHAIR",
+            "deviceAddInfo": "-10% off",
+            "devicePriceOff": true,
+            "deviceExclusive": false,
+            "deviceNew": false,
+            "deviceOtherInfo": false,
+            "deviceImg": "chair",
+            "deviceRating": "4.9",
+            "deviceReviewsCount": "451",
+            "deviceTitle": "Razer Iskur - Black / Green - XL",
+            "deviceActualPrice": "$536.99",
+            "deviceOldPrice": "$599.99"
+        },
+        {
+            "deviceType": "GEAR",
+            "deviceAddInfo": "-30% off",
+            "devicePriceOff": true,
+            "deviceExclusive": false,
+            "deviceNew": false,
+            "deviceOtherInfo": false,
+            "deviceImg": "backpack",
+            "deviceRating": "4.8",
+            "deviceReviewsCount": "94",
+            "deviceTitle": "Razer Rogue 13 Backpack V3 - Chromatic",
+            "deviceActualPrice": "$41.99",
+            "deviceOldPrice": "$59.99"
         }
     ]
 }

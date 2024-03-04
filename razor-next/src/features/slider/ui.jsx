@@ -1,7 +1,11 @@
+'use client'
+
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../slider/styles.scss'
+import la from '@/shared/ui/icon/assets/left-arrow.svg'
+import ra from '@/shared/ui/icon/assets/right-arrow.svg'
 
 function CustomNextArrow(props) {
   const { className, style, onClick } = props;
@@ -16,7 +20,7 @@ function CustomNextArrow(props) {
           border: "1px solid",
           borderColor: "#f7f7f7",
           borderRadius: "50%",
-          backgroundImage: "url(src/assets/rightArrow.svg)",
+          backgroundImage: `url(${ra.src})`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           cursor: "pointer" }}
@@ -37,7 +41,7 @@ function CustomPrevArrow(props) {
           border: "1px solid",
           borderColor: "#f7f7f7",
           borderRadius: "50%",
-          backgroundImage: "url(src/assets/leftArrow.svg)",
+          backgroundImage: `url(${la.src})`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           cursor: "pointer" }}

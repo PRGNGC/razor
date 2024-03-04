@@ -16,10 +16,10 @@ async function getNews(){
   return response.data
 }
 
-const getAdvertisements = async () => {
-  const response = await axios.get(advertisementsUrl)
-  return response.data
-}
+// const getAdvertisements = async () => {
+//   const response = await axios.get(advertisementsUrl)
+//   return response.data
+// }
 
 // const addContact = async (contact: {}) => {
 //   const response = await axios.post(baseUrl, contact)
@@ -34,4 +34,4 @@ const getAdvertisements = async () => {
 // export default { getAll, addContact, deleteContact }
 
 
-export { getAdvertisements, getNews }
+export { getNews }

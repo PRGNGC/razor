@@ -1,5 +1,7 @@
 import { ButtonLink } from "@/shared/ui/button-link"
 import styles from './styles.module.scss'
+import Image from 'next/image'
+import bg from '@/shared/ui/images/main-background.png'
 
 export function MainSuggestion(){
     return(
