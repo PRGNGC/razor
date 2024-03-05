@@ -1,6 +1,6 @@
 import './styles.scss'
 import { ExcTitle } from './exc-title'
-import { ExcSlider } from './exc-slider'
+import { ExcSlider } from './exc-slider/ui'
 
 export function ExcBlock(){
     return(

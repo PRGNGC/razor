@@ -75,7 +75,7 @@ export function NewsSlider(){
                                                 currentLoading += i.size;
                                                 nextNew = index+1;
                                                 return(
-                                                    <div key={crypto.randomUUID()} className={styles.newCard} style={{backgroundImage: 'url(' + i.img + ')', maxWidth: i.size == 2 ? 707 + 'px' : 320 + 'px'}}>
+                                                    <div key={crypto.randomUUID()} className={styles.newCard} style={{backgroundImage: 'url(' + i.img + ')', maxWidth: i.size == 2 ? 738 + 'px' : 320 + 'px'}}>
                                                         <Link href='/' className={styles.cardLink} />
                                                         <div className={styles.newType}>{i.type}</div>
                                                         <h1 className={styles.newTitle}>{i.title}</h1>

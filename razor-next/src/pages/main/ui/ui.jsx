@@ -3,6 +3,7 @@ import { InitialBlock } from "@/widgets/main-page/initial-block"
 import { NewsBlock } from "@/widgets/main-page/news-block" 
 import { AdvBlock } from "@/widgets/main-page/adv-block"
 import { ExcBlock } from "@/widgets/main-page/exc-block"
+import { CategoriesBlock } from "@/widgets/main-page/categories-block"
 
 export function MainPage(){
     return(
@@ -12,6 +13,7 @@ export function MainPage(){
             <NewsBlock></NewsBlock>
             <AdvBlock></AdvBlock>
             <ExcBlock></ExcBlock>
+            <CategoriesBlock></CategoriesBlock>
         </>
     )
 }

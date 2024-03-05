@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import SearchGlass from '@/shared/ui/icon/assets/search-glass.svg'
 import styles from './styles.module.scss'
 
 export function SearchField({fieldType = 'main'}){
@@ -7,8 +6,10 @@ export function SearchField({fieldType = 'main'}){
         <label id='search-field' htmlFor={`searchField ` + fieldType} className={fieldType === 'main' ? `${styles.main} ${styles.searchFieldContent}` : styles.searchFieldContent}>
         {/* <label htmlFor={`searchField `} className={styles.searchFieldContent}> */}
             <Image
-                src={SearchGlass}
+                src='/icons/search-glass.svg'
                 alt='search-glass'
+                width={18}
+                height={18}
             />
             <input type="search" id={`searchField ` + fieldType} placeholder='Search' className={styles.searchInput}/>
         </label>

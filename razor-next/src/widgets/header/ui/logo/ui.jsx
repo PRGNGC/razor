@@ -3,7 +3,6 @@
 import styles from './styles.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
-import razorLabel from '@/shared/ui/icon/assets/razor-label.svg'
 import { useSelector, useDispatch } from 'react-redux'
 import { menuToggle } from '@/features/store/menu/menuSlice'
 
@@ -15,7 +14,9 @@ export function CorpLogo(){
         <Link href='/'>
             <Image
                 onClick={() => { if(menu == true) dispatch(menuToggle()) }}
-                src={razorLabel}
+                src='/icons/razor-label.svg'
+                width={50}
+                height={50}
                 alt='razor-label'
             />
         </Link>

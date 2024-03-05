@@ -1,10 +1,6 @@
 import styles from './styles.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
-import YoutubeIcon from '@/shared/ui/icon/assets/youtube.svg'
-import FacebookIcon from '@/shared/ui/icon/assets/facebook.svg'
-import TwitterIcon from '@/shared/ui/icon/assets/twitter.svg'
-import InstagramIcon from '@/shared/ui/icon/assets/instagram.svg'
 
 export function Links(){
     return(
@@ -12,16 +8,16 @@ export function Links(){
             <p className={styles.socialLinksWatchword}>FOR GAMERS. BY GAMERS.™</p>
             <div className={styles.socialLinks}>
                 <Link href='/'> 
-                    <Image src={YoutubeIcon} alt='YoutubeIcon' />
+                    <Image src='/icons/youtube.svg' alt='YoutubeIcon' width={20} height={20}/>
                 </Link>
                 <Link href='/'>
-                    <Image src={FacebookIcon} alt='FacebookIcon'/>
+                    <Image src='/icons/facebook.svg' alt='FacebookIcon' width={13} height={20}/>
                 </Link>
                 <Link href='/'>
-                    <Image src={InstagramIcon} alt='InstagramIcon' />
+                    <Image src='/icons/instagram.svg' alt='InstagramIcon' width={20} height={20}/>
                 </Link>
                 <Link href='/'>
-                    <Image src={TwitterIcon} alt='TwitterIcon' />
+                    <Image src='/icons/twitter.svg' alt='TwitterIcon' width={20} height={20}/>
                 </Link>
             </div>
         </div>

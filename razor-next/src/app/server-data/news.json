@@ -5,84 +5,98 @@
             "title": "THE ULTIMATE 14” GAMING LAPTOP",
             "text": "Gaming Laptop with AMD Ryzen™ 6900HX",
             "type": "LAPTOP",
+            "img": "/images/news-img-1.png",
             "size": 1
         },
         {
             "title": "TWITCHCON SAN DIEGO 2022",
             "text": "We`ll see you there",
             "type": "EVENT",
+            "img": "/images/news-img-2.png",
             "size": 1
         },
         {
             "title": "THE ULTIMATE 14” GAMING LAPTOP 2022",  
             "text": "Gaming Laptop with AMD Ryzen™ 6900HX",
             "type": "LAPTOP",
+            "img": "/images/news-img-3.png",
             "size": 2
         },
         {
             "title": "RAZERSTORE REWARDS",
             "text": "US$10 off* and a bonus of 1,000 Razer Silver",
             "type": "EVENT",
+            "img": "/images/news-img-4.png",
             "size": 2
         },
         {
             "title": "RAZER NOMAD DUFFEL BAG",
             "text": "PACK TO CONQUER",
             "type": "LIFESTYLE",
+            "img": "/images/news-img-5.png",
             "size": 1
         },
         {
             "title": "RAZER DEATHSTALKER V2 PRO",
             "text": "A wireless ultra-slim optical keyboard",
             "type": "KEYBOARD",
+            "img": "/images/news-img-6.png",
             "size": 1
         },
         {
             "title": "Laptop Products",
             "text": "Laptop Products",
             "type": "LAPTOP",
+            "img": "/images/laptop-products.png",
             "size": 1
         },
         {
             "title": "Audio Products",
             "text": "Audio Products",
             "type": "AUDIO",
+            "img": "/images/audio-products.png",
             "size": 1
         },
         {
             "title": "Components Products",  
             "text": "Components Products",
             "type": "COMPONENT",
+            "img": "/images/component-products.png",
             "size": 2
         },
         {
             "title": "Keyboards Products",
             "text": "Keyboards Products",
             "type": "KEYBOARD",
+            "img": "/images/keyboard-products.png",
             "size": 2
         },
         {
             "title": "Console Products",
             "text": "Console Products",
             "type": "CONSOLE",
+            "img": "/images/console-products.png",
             "size": 2
         },
         {
             "title": "Streaming Products",
             "text": "Streaming Products",
             "type": "STREAMING",
+            "img": "/images/streaming-products.png",
             "size": 1
         },
         {
             "title": "Mobile Products",
             "text": "Mobile Products",
             "type": "MOBILE",
+            "img": "/images/mobile-products.png",
             "size": 2
         },
         {
             "title": "Gear Products",
             "text": "Gear Products",
             "type": "GEAR",
+            "img": "/images/gear-products.png",
             "size": 1
         }
     ], 
@@ -99,7 +113,7 @@
             "deviceExclusive": false,
             "deviceNew": false,
             "deviceOtherInfo": false,
-            "deviceImg": "headphones",
+            "deviceImg": "/images/headphones.png",
             "deviceRating": "4.5",
             "deviceReviewsCount": "556",
             "deviceTitle": "Razer BlackShark V2 CouRageJD Edition",
@@ -113,7 +127,7 @@
             "deviceExclusive": false,
             "deviceNew": false,
             "deviceOtherInfo": false,
-            "deviceImg": "laptop",
+            "deviceImg": "/images/laptop.png",
             "deviceRating": "4.7",
             "deviceReviewsCount": "287",
             "deviceTitle": "Razer Blade 15 Base Model - QHD 165Hz - GeForce RTX 3070 - Black",
@@ -127,7 +141,7 @@
             "deviceExclusive": false,
             "deviceNew": false,
             "deviceOtherInfo": false,
-            "deviceImg": "console",
+            "deviceImg": "/images/console.png",
             "deviceRating": "4.2",
             "deviceReviewsCount": "1021",
             "deviceTitle": "Razer Kishi for Android (Xbox)",
@@ -141,7 +155,7 @@
             "deviceExclusive": false,
             "deviceNew": false,
             "deviceOtherInfo": false,
-            "deviceImg": "chair",
+            "deviceImg": "/images/chair.png",
             "deviceRating": "4.9",
             "deviceReviewsCount": "451",
             "deviceTitle": "Razer Iskur - Black / Green - XL",
@@ -155,7 +169,7 @@
             "deviceExclusive": false,
             "deviceNew": false,
             "deviceOtherInfo": false,
-            "deviceImg": "backpack",
+            "deviceImg": "/images/backpack.png",
             "deviceRating": "4.8",
             "deviceReviewsCount": "94",
             "deviceTitle": "Razer Rogue 13 Backpack V3 - Chromatic",
