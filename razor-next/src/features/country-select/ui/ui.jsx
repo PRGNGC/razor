@@ -52,7 +52,8 @@ export function CountrySelect(){
                                                 key={crypto.randomUUID()}
                                                 onClick={() => 
                                                     {
-                                                        dispatch(countryChange(country.country));
+                                                        // dispatch(countryChange(country.country));
+                                                        dispatch(countryChange({country: country.country, mapCountry: country.mapLocation}));
                                                         setIsOpen(false);
                                                         document.querySelector('body').style = 'overflow-y: scroll';
                                                     }

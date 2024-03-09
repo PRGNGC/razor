@@ -5,7 +5,6 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { useMap } from 'react-leaflet'
 import { Icon } from 'leaflet'
 import "leaflet/dist/leaflet.css";
-import MapMarker from '../../../../../../public/icons/map-marker.svg'
 import { useState, useEffect } from 'react'
 import { getStores } from '../api'
 
@@ -19,7 +18,6 @@ function LocationSetter({location}) {
   const [activeMarker, setActiveMarker] = useState(null);
     const storeIcon = new Icon({
         iconUrl: '/icons/map-marker.svg',
-        // iconUrl: MapMarker,
         iconSize: [25, 25]
     })
 
@@ -39,8 +37,8 @@ function LocationSetter({location}) {
 
     return(
         <div className={styles.mapContainer}>
-        <MapContainer >
-        {/* <MapContainer center={mapCenter} zoom={4}> */}
+        {/* <MapContainer > */}
+        <MapContainer center={mapCenter} zoom={4}>
           <LocationSetter location={country}/>
           <TileLayer
             attribution='© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'

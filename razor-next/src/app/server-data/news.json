@@ -196,7 +196,7 @@
             "region": "Latin America",
             "countries": [
                 {
-                    "country": "Aegentina",
+                    "country": "Argentina",
                     "language": "Spanish",
                     "mapLocation": "USA"
                 },
@@ -366,7 +366,7 @@
                 {
                     "country": "Australia",
                     "language": "English",
-                    "mapLocation": "Hong-Kong"
+                    "mapLocation": "Hong Kong"
                 },
                 {
                     "country": "Hong Kong (香港)",
@@ -417,7 +417,7 @@
     ],
     "stores": [
         {
-            "storeImg":"sanDiegoStore",
+            "storeImg":"/images/san-diego-store.png",
             "storeTitle": "RAZERSTORE SAN DIEGO",
             "storeText": "4373 La Jolla Village Dr #G2, San Diego, CA 92122",
             "storeLocationLatitude": "32.869494",
@@ -425,7 +425,7 @@
             "storeCountry": "USA"
         },
         {
-            "storeImg":"newJerseyStore",
+            "storeImg":"/images/new-jersey-store.png",
             "storeTitle": "RAZERSTORE NEW JERSEY",
             "storeText": "One Garden State Plaza 1 Garden State Plaza – Space 2128 Paramus, NJ 07652",
             "storeLocationLatitude": "40.917995",
@@ -433,7 +433,7 @@
             "storeCountry": "USA"
         },
         {
-            "storeImg":"austinStore",
+            "storeImg":"/images/austin-store.png",
             "storeTitle": "RAZERSTORE AUSTIN",
             "storeText": "The Domain 11401 Century Oaks Terrace Austin, TX 78758",
             "storeLocationLatitude": "30.400657",
@@ -441,7 +441,7 @@
             "storeCountry": "USA"
         },
         {
-            "storeImg":"sanFranciscoStore",
+            "storeImg":"/images/san-francisco-store.png",
             "storeTitle": "RAZERSTORE SAN FRANCISCO",
             "storeText": "Westfield San Francisco Centre, Shop 136 865 Market Street San Francisco, CA 94103",
             "storeLocationLatitude": "37.783999",
@@ -449,7 +449,7 @@
             "storeCountry": "USA"
         },
         {
-            "storeImg":"seattleStore",
+            "storeImg":"/images/seattle-store.png",
             "storeTitle": "RAZERSTORE SEATTLE",
             "storeText": "University Village Space #C70 2616 NE 46th St.Seattle, WA 98105",
             "storeLocationLatitude": "47.663822",
@@ -457,7 +457,7 @@
             "storeCountry": "USA"
         },
         {
-            "storeImg":"lasVegasStore",
+            "storeImg":"/images/las-vegas-store.png",
             "storeTitle": "RAZERSTORE LAS VEGAS",
             "storeText": "10250 Santa Monica Blvd #2460 Level 2, Los Angeles CA 90067",
             "storeLocationLatitude": "36.117369",
@@ -465,7 +465,7 @@
             "storeCountry": "USA"
         },
         {
-            "storeImg":"losAngelesStore",
+            "storeImg":"/images/los-angeles-store.jpg",
             "storeTitle": "RAZERSTORE LOS ANGELES",
             "storeText": "The Linq Promenade 3545 S. Las Vegas Blvd. L-27, Las Vegas,​ NV 89109",
             "storeLocationLatitude": "34.059803",
@@ -473,7 +473,7 @@
             "storeCountry": "USA"
         },
         {
-            "storeImg":"newYorkStore",
+            "storeImg":"/images/new-york-store.jpg",
             "storeTitle": "RAZERSTORE NEW YORK",
             "storeText": "630 Old Country Road Space 1054 Garden City, NY 11530",
             "storeLocationLatitude": "40.742570",
@@ -481,7 +481,7 @@
             "storeCountry": "USA"
         },
         {
-            "storeImg":"kingOfPrusiaStore",
+            "storeImg":"/images/king-of-prusia-store.jpg",
             "storeTitle": "RAZERSTORE KING OF PRUSSIA",
             "storeText": "The Plaza King of Prussia 160 North Gulph Road Suite 2352 King of Prussia, PA 19406 United States",
             "storeLocationLatitude": "40.085747",
@@ -489,7 +489,7 @@
             "storeCountry": "USA"
         },
         {
-            "storeImg":"orlandoStore",
+            "storeImg":"/images/orlando-store.jpg",
             "storeTitle": "RAZERSTORE ORLANDO",
             "storeText": "8001 S. Orange Blossom Trail Suite 136 Orlando, FL 32809",
             "storeLocationLatitude": "28.446005",
@@ -497,7 +497,7 @@
             "storeCountry": "USA"
         },
         {
-            "storeImg":"miamiStore",
+            "storeImg":"/images/miami-store.jpg",
             "storeTitle": "RAZERSTORE MIAMI",
             "storeText": "7535 North Kendall Drive Suite 1510A Miami, FL 33156",
             "storeLocationLatitude": "25.690232",
@@ -505,7 +505,7 @@
             "storeCountry": "USA"
         },
         {
-            "storeImg":"londonStore",
+            "storeImg":"/images/london-store.jpg",
             "storeTitle": "RAZERSTORE LONDON",
             "storeText": "Charing Cross Unit 7, 53 Charing Cross Road, London,​ WC2H 7PZ, United Kingdom",
             "storeLocationLatitude": "51.5140563",
@@ -513,7 +513,7 @@
             "storeCountry": "United Kingdom"
         },
         {
-            "storeImg":"singaporeStore",
+            "storeImg":"/images/singapore-store.jpg",
             "storeTitle": "RAZERSTORE SINGAPORE",
             "storeText": "Razer SEA HQ 1 one-north Crescent Singapore 138538",
             "storeLocationLatitude": "1.294040",
@@ -521,7 +521,7 @@
             "storeCountry": "Singapore"
         },
         {
-            "storeImg":"funanStore",
+            "storeImg":"/images/funan-store.jpg",
             "storeTitle": "RAZERSTORE FUNAN",
             "storeText": "Funan 107 North Bridge Rd #01-10 Funan Singapore 179105'",
             "storeLocationLatitude": "1.299565",
@@ -529,7 +529,7 @@
             "storeCountry": "Singapore"
         },
         {
-            "storeImg":"hongKongStore",
+            "storeImg":"/images/hongkong-store.jpg",
             "storeTitle": "RAZERSTORE HONG KONG'",
             "storeText": "Causeway Bay Shops A & D on G/F, No. 1 Cannon Street Causeway Bay, Hong Kong SAR", 
             "storeLocationLatitude": "22.280393",
@@ -537,12 +537,50 @@
             "storeCountry": "Hong Kong"
         },
         {
-            "storeImg":"taiwanStor",
+            "storeImg":"/images/taiwan-store.jpg",
             "storeTitle": "RAZERSTORE TAIPEI",
             "storeText": "Syntrend Creative Park RazerStore Taipei, 207-2, 2F. No. 2, Section 3, Civic Blvd Zhongshan District, Taipei City 104", 
             "storeLocationLatitude": "25.045368",
             "storeLocationLongitude": "121.531404",
             "storeCountry": "Taiwan"
+        }
+    ], 
+    "storesCountries": 
+    [
+        { 
+            "value": "USA", 
+            "label": "USA", 
+            "latitude": "40.290128", 
+            "longitude": "-101.312934", 
+            "zoom": 4
+        },
+        { 
+            "value": "United Kingdom",
+            "label": "United Kingdom",
+            "latitude": "51.954081", 
+            "longitude": "-1.101042",
+            "zoom": 6 
+        },
+        { 
+            "value": "Singapore", 
+            "label": "Singapore", 
+            "latitude": "1.372501", 
+            "longitude": "103.801277", 
+            "zoom": 11 
+        },
+        { 
+            "value": "Hong Kong",
+            "label": "Hong Kong", 
+            "latitude": "22.358665", 
+            "longitude": "114.181351",
+            "zoom":10 
+        },
+        { 
+            "value": "Taiwan", 
+            "label": "Taiwan", 
+            "latitude": "23.720006", 
+            "longitude": "120.96932",
+            "zoom": 7 
         }
     ]
 }

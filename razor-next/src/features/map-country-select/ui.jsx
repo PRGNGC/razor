@@ -3,9 +3,8 @@ import styles from './styles.module.scss'
 import Select from 'react-select'
 import { useSelector, useDispatch } from 'react-redux'
 
-export function MapCountrySelect({country}){
-    const mapCountry = useSelector((state) => state.countryReducer.mapCountry)
-    // alert(mapCountry)
+export function MapCountrySelect({country, currentCountry}){
+    // const mapCountry = useSelector((state) => state.countryReducer.mapCountry)
     const customStyles = {
         control: (defaultStyles) => ({
           ...defaultStyles,
@@ -58,6 +57,9 @@ export function MapCountrySelect({country}){
         { value: 'Taiwan', label: 'Taiwan', latitude: '23.720006', longitude: '120.969320', zoom: 7 },
       ];
 
+      // console.log(options.find(i => i.label == mapCountry));
+      // console.log(options[4]);
+
     return(
         <Select
             onChange={selectedOption => country(selectedOption)}
@@ -66,7 +68,9 @@ export function MapCountrySelect({country}){
             isSearchable={false}
             // placeholder={'usa'}
             // value={mapCountry}
-            placeholder={mapCountry}
+            defaultValue = {currentCountry}
+            // defaultValue = {options.find(i => i.label == mapCountry)}
+            // placeholder={mapCountry}
         />
     )
 }

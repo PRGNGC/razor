@@ -1,26 +1,22 @@
 'use client'
-import { useState, useEffect } from "react";
 import { SliderTemplate } from "@/features/slider";
 import styles from './styles.module.scss'
 import Link from "next/link";
 import { getNews } from "../api";
+import { useQuery } from "@tanstack/react-query";
 
 export function NewsSlider(){
-    const [news, setNews] = useState([]);
- 
-    
-    async function FetchData(){
-        const response = await getNews();
-        setNews(response)
-    }
-    
-    useEffect(() => {
-        FetchData()
-    }, [])
+    const { isPending, isError, data, error } = useQuery({ queryKey: ['news'], queryFn: getNews})
 
+    if(isPending){
+        return(<p>loading...</p>);
+    }
+    if(isError){
+        return(<p>{error.message}</p>);
+    }
 
     const maxCapacity = 4;
-    let pagesCount = new Array(Math.ceil(news.reduce((sum, current) => sum + current.size, 0) / maxCapacity)).fill(1);
+    let pagesCount = new Array(Math.ceil(data?.reduce((sum, current) => sum + current.size, 0) / maxCapacity)).fill(1);
     let currentLoading = 0;
     let nextNew = 0;
 
@@ -30,9 +26,8 @@ export function NewsSlider(){
                 <div className={styles.newsBlockContent}>
                     <div className={styles.smallSlider}>
                         {
-                            news.map(i => {
+                            data?.map(i => {
                                 return(
-                                    // <div key={crypto.randomUUID()} className={styles.newCard} >
                                     <div key={crypto.randomUUID()} className={styles.newCard} style={{backgroundImage: 'url(' + i.img + ')'}}> 
                                         <Link href='/' className={styles.cardLink} />
                                         <div className={styles.newType}>{i.type}</div>
@@ -68,7 +63,7 @@ export function NewsSlider(){
                                     currentLoading = 0;
                                     return(
                                     <div key={crypto.randomUUID()} className={styles.newsSlider}>   
-                                        {news.map((i, index) => {
+                                        {data?.map((i, index) => {
                                             if(maxCapacity <= currentLoading) return;
                                             if(index >= nextNew){
                                                 if(currentLoading + i.size > maxCapacity) return;
@@ -94,13 +89,3 @@ export function NewsSlider(){
         </section>
     )
 }
-    // axios.get('http://localhost:8000/news')
-    // .then(resp => {
-    //     let data = resp.data;
-    //     data.forEach(e => {
-    //         console.log(`${e.title}, ${e.text}, ${e.type}`);
-    //     });
-    // })
-    // .catch(error => {
-    //     console.log(error);
-    // })

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.25.0",
     "axios": "^1.6.7",
     "json-server": "^1.0.0-alpha.23",
     "leaflet": "^1.9.4",

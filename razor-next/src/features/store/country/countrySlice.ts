@@ -15,8 +15,8 @@ export const country = createSlice({
     initialState,
     reducers: {
         countryChange: (state, action) => {
-            state.country = action.payload;
-            state.mapCountry = 'USA'
+            state.country = action.payload.country;
+            state.mapCountry = action.payload.mapCountry;
         }
     },
 })
