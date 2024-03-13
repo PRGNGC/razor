@@ -7,6 +7,7 @@ import { Icon } from 'leaflet'
 import "leaflet/dist/leaflet.css";
 import { useState, useEffect } from 'react'
 import { getStores } from '../api'
+import { useQuery } from '@tanstack/react-query'
 
 function LocationSetter({location}) {
     const map = useMap();
@@ -21,17 +22,27 @@ function LocationSetter({location}) {
         iconSize: [25, 25]
     })
 
+    const {isLoading, isError, data, error} = useQuery({queryKey: ['stores'], queryFn: getStores})
 
-    const [stores, setStores] = useState([]);
-
-    async function FetchData(){
-      const response = await getStores();
-      setStores(response)
+    if(isLoading){
+      return <p>Loading...</p>
+    }
+    
+    if(isError){
+      return <p>{error.message}</p>
     }
 
-    useEffect(() => {
-      FetchData();
-    }, [])
+
+    // const [stores, setStores] = useState([]);
+
+    // async function FetchData(){
+    //   const response = await getStores();
+    //   setStores(response)
+    // }
+
+    // useEffect(() => {
+    //   FetchData();
+    // }, [])
 
     let mapCenter = [country.latitude, country.longitude];
 
@@ -45,7 +56,7 @@ function LocationSetter({location}) {
             url = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
           />
             {
-              stores.map(store => {
+              data?.map(store => {
                 return(
                   <div key={crypto.randomUUID()}>
                     <Marker

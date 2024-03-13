@@ -1,23 +1,20 @@
 'use client'
-
 import { getExclusives } from '../api';
-import { useState, useEffect } from 'react'
 import { SliderTemplate } from '@/features/slider/ui'
 import { ItemCard } from '@/entities/item-card';
+import { useQuery } from '@tanstack/react-query';
 
 export function ExcSlider(){
-  const [exclusives, setExclusives] = useState([]);
- 
-    
-  async function FetchData(){
-      const response = await getExclusives();
-      setExclusives(response)
+  
+  const {isLoading, isError, data, error} = useQuery({queryKey: ['exclusives'], queryFn: getExclusives})
+
+  if(isLoading){
+    return <p>Loading...</p>
   }
   
-  useEffect(() => {
-      FetchData()
-  }, [])
-
+  if(isError){
+    return <p>{error.message}</p>
+  }
 
     return(
         <SliderTemplate personalSettings={{
@@ -50,7 +47,7 @@ export function ExcSlider(){
               ]
         }}>
             {
-                exclusives.map(i => <ItemCard key={crypto.randomUUID()} deviceInfo={i}></ItemCard>)
+                data?.map(i => <ItemCard key={crypto.randomUUID()} deviceInfo={i}></ItemCard>)
             }
         </SliderTemplate>
     )

@@ -14,24 +14,24 @@ export function LocationBlock(){
     
     // const {isLoading, isError, data, error} = useQuery({queryKey: ['mapCountries'], queryFn: getStoresCountries })
     
-    const store = useSelector(state => state.countryReducer.mapCountry)
+    // const store = useSelector(state => state.countryReducer.mapCountry)
 
-    alert(store);
+    // alert(store);
     
-    console.log(data?.find(i => i.label == store))
+    // console.log(data?.find(i => i.label == store))
     
-    const [currentMapCountry, setCurrnetMapCountry] = useState(data == undefined ?
-                                                                { value: 'Singapore', label: 'Singapore', latitude: '1.372501', longitude: '103.801277', zoom: 11 } :
-                                                                data?.find(i => i.label == store));
+    // const [currentMapCountry, setCurrnetMapCountry] = useState(data == undefined ?
+    //                                                             { value: 'Singapore', label: 'Singapore', latitude: '1.372501', longitude: '103.801277', zoom: 11 } :
+    //                                                             data?.find(i => i.label == store));
     
-    useEffect(() => {
-        const {isLoading, isError, data, error} = useQuery({queryKey: ['mapCountries'], queryFn: getStoresCountries })
+    // useEffect(() => {
+    //     const {isLoading, isError, data, error} = useQuery({queryKey: ['mapCountries'], queryFn: getStoresCountries })
         
-    }, [])
+    // }, [])
 
     // const [storesCountries, setStoresCountries] = useState([]);
     
-    // // const [currentMapCountry, setCurrnetMapCountry] = useState();
+    const [currentMapCountry, setCurrnetMapCountry] = useState({ value: 'Singapore', label: 'Singapore', latitude: '1.372501', longitude: '103.801277', zoom: 11 });
 
     // async function FetchData(){
     //     const response  = await getStoresCountries();

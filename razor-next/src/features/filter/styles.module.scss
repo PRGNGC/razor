@@ -1,0 +1,34 @@
+@import '@/app/common.scss';
+
+.filtersBlock{
+    background-color: $secondary;
+    border-radius: 10px;
+    // width: fit-content;
+    max-width: 330px;
+    padding: 20px;
+    
+    .appliedFiltersBlock{
+        padding-bottom: 20px;
+        .appliedFiltersHeader{
+            display: flex;
+            justify-content: space-between;
+            .appliedFiltersTitle{
+                @include oswald-text(18, $white, 5, bold);
+            }
+        }
+    }
+
+    .filters{
+        .filterCategory{
+            padding: 20px 0;
+            border-top: 1px solid $gray;
+            .filterCategoryName{
+                @include oswald-text(18, $white, 5, bold);
+            }
+            .filterCategoryOption{
+                display: block;
+                @include manrope-text(18, $gray, 400);
+            }
+        }
+    }
+}

@@ -1,8 +1,8 @@
 import axios from "axios"
-const newsUrl = 'http://localhost:8000/news'
+import { CommonAxios } from "@/shared/api"
 
 async function getNews(){
-  const response = await axios.get(newsUrl) 
+  const response = await CommonAxios.get('news') 
   return response.data
 }
 

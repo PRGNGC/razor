@@ -5,7 +5,7 @@ export function Navbar(){
     return(
         <nav className={styles.navigationBar}>
             <ul className={styles.menuItems}>
-                <li className={styles.menuItem}><Link href="/">PC</Link></li>
+                <li className={styles.menuItem}><Link href="/allProducts">PC</Link></li>
                 <li className={styles.menuItem}><Link href="/">Console</Link></li>
                 <li className={styles.menuItem}><Link href="/">Mobile</Link></li>
                 <li className={styles.menuItem}><Link href="/">Lifestyle</Link></li>
@@ -15,5 +15,5 @@ export function Navbar(){
                 <li className={styles.menuItem}><Link href="/">Store</Link></li>
             </ul>
         </nav>
-)
+    )
 }
