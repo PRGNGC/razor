@@ -6,7 +6,7 @@ import { getSeveralLaptops } from './api'
 import { ItemCard } from '@/entities/item-card'
 
 export function LaptopsSlider(){
-    const {isLoading, isError, data, error} = useQuery({queryKey: ['exclusives'], queryFn: getSeveralLaptops})
+    const {isLoading, isError, data, error} = useQuery({queryKey: ['laptops'], queryFn: getSeveralLaptops})
 
     if(isLoading){
       return <p>Loading...</p>

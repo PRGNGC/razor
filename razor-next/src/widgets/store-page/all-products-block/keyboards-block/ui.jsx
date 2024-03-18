@@ -1,13 +1,13 @@
 import styles from './styles.module.scss'
-import { LaptopsTitle } from './keyboards-title'
-import { LaptopsSlider } from './keyboards-slider'
+import { KeyboardsTitle } from './keyboards-title'
+import { KeyboardsSlider } from './keyboards-slider'
 
-export function LaptopsBlock(){
+export function KeyboardsBlock(){
     return(
-        <section className={styles.laptops}>
+        <section className={styles.keyboards}>
             <div className={styles.container}>
-                <LaptopsTitle></LaptopsTitle>
-                <LaptopsSlider></LaptopsSlider>
+                <KeyboardsTitle></KeyboardsTitle>
+                <KeyboardsSlider></KeyboardsSlider>
             </div>
         </section>
     )

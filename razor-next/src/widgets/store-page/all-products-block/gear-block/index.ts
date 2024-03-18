@@ -1,1 +1,1 @@
-export { LaptopsBlock } from './ui'
+export { GearBlock } from './ui'

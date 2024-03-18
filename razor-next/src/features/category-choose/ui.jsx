@@ -1,18 +1,188 @@
 'use client'
 import styles from './styles.module.scss'
 import Image from 'next/image'
-import { useState } from 'react';
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
 
-export function CategoryChoose({curCategory, setCurrentCategory}){
-    const [category, setCategory] = useState('');
+export function CategoryChoose(){
+    const params = useParams();
 
     return(
         <ul className={styles.categories}>
-            {/* <li className={category == 'laptops' ? styles.selectedCategory : styles.category}>  */}
-            <li className={curCategory == 'laptops' ? styles.selectedCategory : styles.category}> 
-                <p className={curCategory == 'laptops' ? styles.selectedCategoryName : styles.categoryName}>Laptops</p>
-                {/* <p className={category == 'laptops' ? styles.selectedCategoryName : styles.categoryName}>Laptops</p> */}
-                {/* <input type="radio" id='laptops' name="myRadio" value='laptops' onClick={() => {setCategory("laptops")}}/> */}
+
+            <Link href='/store/laptops'>
+                <li className={params.slug == 'laptops' ? styles.selectedCategory : styles.category}> 
+                    <p className={params.slug == 'laptops' ? styles.selectedCategoryName : styles.categoryName}>Laptops</p>
+                    <Link href='/store'  >
+                        <Image 
+                            src='/icons/close-cross.svg' 
+                            width={24} 
+                            height={24} 
+                            className={params.slug == 'laptops' ? styles.selectedCross : styles.cross} 
+                            alt='cross'
+                        />
+                    </Link>
+                </li>
+            </Link>
+
+            <Link href='/store/keyboards'>
+                <li className={params.slug == 'keyboards' ? styles.selectedCategory : styles.category}> 
+                    <p className={params.slug == 'keyboards' ? styles.selectedCategoryName : styles.categoryName}>Keyboards</p>
+                    <Link href='/store' >
+                        <Image 
+                            src='/icons/close-cross.svg' 
+                            width={24} 
+                            height={24} 
+                            className={params.slug == 'keyboards' ? styles.selectedCross : styles.cross} 
+                            alt='cross'
+                        />
+                    </Link>
+                </li>
+            </Link>
+
+            <Link href='/store/mice'>
+                <li className={params.slug == 'mice' ? styles.selectedCategory : styles.category}> 
+                    <p className={params.slug == 'mice' ? styles.selectedCategoryName : styles.categoryName}>Mice</p>
+                    <Link href='/store' >
+                        <Image 
+                            src='/icons/close-cross.svg' 
+                            width={24} 
+                            height={24} 
+                            className={params.slug == 'mice' ? styles.selectedCross : styles.cross} 
+                            alt='cross'
+                        />
+                    </Link>
+                </li>
+            </Link>
+
+            <Link href='/store/audio'>
+                <li className={params.slug == 'audio' ? styles.selectedCategory : styles.category}> 
+                    <p className={params.slug == 'audio' ? styles.selectedCategoryName : styles.categoryName}>Audio</p>
+                    <Link href='/store' >
+                        <Image 
+                            src='/icons/close-cross.svg' 
+                            width={24} 
+                            height={24} 
+                            className={params.slug == 'audio' ? styles.selectedCross : styles.cross} 
+                            alt='cross'
+                        />
+                    </Link>
+                </li>
+            </Link>
+
+            <Link href='/store/components'>
+                <li className={params.slug == 'components' ? styles.selectedCategory : styles.category}> 
+                    <p className={params.slug == 'components' ? styles.selectedCategoryName : styles.categoryName}>Components</p>
+                    <Link href='/store' >
+                        <Image 
+                            src='/icons/close-cross.svg' 
+                            width={24} 
+                            height={24} 
+                            className={params.slug == 'components' ? styles.selectedCross : styles.cross} 
+                            alt='cross'
+                        />
+                    </Link>
+                </li>
+            </Link>
+
+            <Link href='/store/chairs'>
+                <li className={params.slug == 'chairs' ? styles.selectedCategory : styles.category}> 
+                    <p className={params.slug == 'chairs' ? styles.selectedCategoryName : styles.categoryName}>Chairs</p>
+                    <Link href='/store' >
+                        <Image 
+                            src='/icons/close-cross.svg' 
+                            width={24} 
+                            height={24} 
+                            className={params.slug == 'chairs' ? styles.selectedCross : styles.cross} 
+                            alt='cross'
+                        />
+                    </Link>
+                </li>
+            </Link>
+
+            <Link href='/store/streaming'>
+                <li className={params.slug == 'streaming' ? styles.selectedCategory : styles.category}> 
+                    <p className={params.slug == 'streaming' ? styles.selectedCategoryName : styles.categoryName}>Streaming</p>
+                    <Link href='/store' >
+                        <Image 
+                            src='/icons/close-cross.svg' 
+                            width={24} 
+                            height={24} 
+                            className={params.slug == 'streaming' ? styles.selectedCross : styles.cross} 
+                            alt='cross'
+                        />
+                    </Link>
+                </li>
+            </Link>
+
+            <Link href='/store/console'>
+                <li className={params.slug == 'console' ? styles.selectedCategory : styles.category}> 
+                    <p className={params.slug == 'console' ? styles.selectedCategoryName : styles.categoryName}>Console</p>
+                    <Link href='/store' >
+                        <Image 
+                            src='/icons/close-cross.svg' 
+                            width={24} 
+                            height={24} 
+                            className={params.slug == 'console' ? styles.selectedCross : styles.cross} 
+                            alt='cross'
+                        />
+                    </Link>
+                </li>
+            </Link>
+
+            <Link href='/store/mobile'>
+                <li className={params.slug == 'mobile' ? styles.selectedCategory : styles.category}> 
+                    <p className={params.slug == 'mobile' ? styles.selectedCategoryName : styles.categoryName}>Mobile</p>
+                    <Link href='/store' >
+                        <Image 
+                            src='/icons/close-cross.svg' 
+                            width={24} 
+                            height={24} 
+                            className={params.slug == 'mobile' ? styles.selectedCross : styles.cross} 
+                            alt='cross'
+                        />
+                    </Link>
+                </li>
+            </Link>
+
+            <Link href='/store/gear'>
+                <li className={params.slug == 'gear' ? styles.selectedCategory : styles.category}> 
+                    <p className={params.slug == 'gear' ? styles.selectedCategoryName : styles.categoryName}>Gear</p>
+                    <Link href='/store' >
+                        <Image 
+                            src='/icons/close-cross.svg' 
+                            width={24} 
+                            height={24} 
+                            className={params.slug == 'gear' ? styles.selectedCross : styles.cross} 
+                            alt='cross'
+                        />
+                    </Link>
+                </li>
+            </Link>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* 
+            <li className={currentCategory == 'laptops' ? styles.selectedCategory : styles.category}> 
+                <p className={currentCategory == 'laptops' ? styles.selectedCategoryName : styles.categoryName}>Laptops</p>
                 <input type="radio" id='laptops' name="myRadio" value='laptops' onClick={() => {setCurrentCategory("laptops")}}/>
                 <Image 
                     src='/icons/close-cross.svg' 
@@ -20,30 +190,30 @@ export function CategoryChoose({curCategory, setCurrentCategory}){
                     onClick={
                         () => {
                             setCurrentCategory('')
-                            // setCategory('')
                             document.querySelector("#laptops").checked = false;
                         }
                     } 
                     height={24} 
-                    className={curCategory == 'laptops' ? styles.selectedCross : styles.cross} 
-                    // className={category == 'laptops' ? styles.selectedCross : styles.cross} 
+                    className={currentCategory == 'laptops' ? styles.selectedCross : styles.cross} 
                     alt='cross'
                 />
             </li>
-            <li className={category == 'keyboards' ? styles.selectedCategory : styles.category}> 
-                <p className={category == 'keyboards' ? styles.selectedCategoryName : styles.categoryName}>Keyboards</p>
-                <input type="radio" id='keyboards' name="myRadio" value='keyboards' onClick={() => {setCategory("keyboards")}}/>
+            <li className={currentCategory == 'keyboards' ? styles.selectedCategory : styles.category}> 
+                <p className={currentCategory == 'keyboards' ? styles.selectedCategoryName : styles.categoryName}>Keyboards</p>
+                <input type="radio" id='keyboards' name="myRadio" value='keyboards' onClick={() => {setCurrentCategory("keyboards")}}/>
                 <Image 
                     src='/icons/close-cross.svg' 
                     width={24} 
                     onClick={
                         () => {
-                            setCategory('')
+                            // setCategory('')
+                            setCurrentCategory('')
                             document.querySelector("#keyboards").checked = false;
                         }
                     } 
                     height={24} 
-                    className={category == 'keyboards' ? styles.selectedCross : styles.cross} 
+                    // className={category == 'keyboards' ? styles.selectedCross : styles.cross} 
+                    className={currentCategory == 'keyboards' ? styles.selectedCross : styles.cross} 
                     alt='cross'
                 />
             </li>
@@ -182,7 +352,7 @@ export function CategoryChoose({curCategory, setCurrentCategory}){
                     className={category == 'gear' ? styles.selectedCross : styles.cross} 
                     alt='cross'
                 />
-            </li>
+            </li> */}
         </ul>
     );
 }

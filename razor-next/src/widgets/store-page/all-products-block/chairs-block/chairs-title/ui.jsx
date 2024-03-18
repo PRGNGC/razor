@@ -3,7 +3,7 @@ import { ButtonLink } from "@/shared/ui/button-link"
 
 export function ChairsTitle(){
     return(
-        <BlockTitle header='THE RAZER BLADE' text='17” GeForce RTX™ 30 Series gaming laptops with up to Intel® Core™ i9-12900H'>
+        <BlockTitle header='GAMING CHAIRS' text='AWARD-WINNING ERGONOMICS AND COMFORT FOR COUNTLESS HOURS OF GAMING'>
             <ButtonLink color='white'>SEE ALL</ButtonLink>
         </BlockTitle>
     )

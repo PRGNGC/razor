@@ -4,7 +4,7 @@ import { AudioSlider } from './audio-slider'
 
 export function AudioBlock(){
     return(
-        <section className={styles.laptops}>
+        <section className={styles.audio}>
             <div className={styles.container}>
                 <AudioTitle></AudioTitle>
                 <AudioSlider></AudioSlider>

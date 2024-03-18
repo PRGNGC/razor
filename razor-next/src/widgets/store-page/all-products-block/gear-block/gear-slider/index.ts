@@ -1,1 +1,1 @@
-export { LaptopsSlider } from './ui'
+export { GearSlider } from './ui'

@@ -1,1 +1,1 @@
-export { getSeveralLaptops } from './requests'
+export { getSeveralMobile } from './requests'

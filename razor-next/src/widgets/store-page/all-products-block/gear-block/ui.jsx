@@ -1,13 +1,13 @@
 import styles from './styles.module.scss'
-import { LaptopsTitle } from "./laptops-title/ui"
-import { LaptopsSlider } from './laptops-slider'
+import { GearTitle } from "./gear-title/ui"
+import { GearSlider } from './gear-slider'
 
-export function LaptopsBlock(){
+export function GearBlock(){
     return(
-        <section className={styles.laptops}>
+        <section className={styles.gear}>
             <div className={styles.container}>
-                <LaptopsTitle></LaptopsTitle>
-                <LaptopsSlider></LaptopsSlider>
+                <GearTitle></GearTitle>
+                <GearSlider></GearSlider>
             </div>
         </section>
     )

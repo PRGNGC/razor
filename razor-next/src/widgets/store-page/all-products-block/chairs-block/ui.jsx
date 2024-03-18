@@ -4,7 +4,7 @@ import { ChairsSlider } from './chairs-slider'
 
 export function ChairsBlock(){
     return(
-        <section className={styles.laptops}>
+        <section className={styles.chairs}>
             <div className={styles.container}>
                 <ChairsTitle />
                 <ChairsSlider />

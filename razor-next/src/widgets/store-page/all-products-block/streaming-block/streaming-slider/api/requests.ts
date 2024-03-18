@@ -1,8 +1,8 @@
 import { CommonAxios } from '@/shared/api';
 
-async function getSeveralLaptops(){
-    // const response = await CommonAxios.get('laptops/?_limit=5');
-    const response = await CommonAxios.get('laptops', {
+async function getSeveralStreaming(){
+    // const response = await CommonAxios.get('streaming/?_limit=5');
+    const response = await CommonAxios.get('streaming', {
         params: {
           _limit: 5
         }
@@ -10,4 +10,4 @@ async function getSeveralLaptops(){
     return response.data
 }
 
-export { getSeveralLaptops }
+export { getSeveralStreaming }

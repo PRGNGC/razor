@@ -1,9 +1,9 @@
 import { BlockTitle } from "@/entities/block-title/ui"
 import { ButtonLink } from "@/shared/ui/button-link"
 
-export function LaptopsTitle(){
+export function MobileTitle(){
     return(
-        <BlockTitle header='THE RAZER BLADE' text='17” GeForce RTX™ 30 Series gaming laptops with up to Intel® Core™ i9-12900H'>
+        <BlockTitle header='MOBILE' text='GAMING AND LIFESTYLE GEAR FOR SEAMLESS ENTERTAINMENT WITH YOUR PHONE OR TABLET'>
             <ButtonLink color='white'>SEE ALL</ButtonLink>
         </BlockTitle>
     )

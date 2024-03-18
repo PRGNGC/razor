@@ -2,11 +2,11 @@
 import styles from './styles.module.scss'
 import { SliderTemplate } from '@/features/slider'
 import { useQuery } from '@tanstack/react-query'
-import { getSeveralLaptops } from './api'
+import { getSeveralComponents } from './api'
 import { ItemCard } from '@/entities/item-card'
 
-export function LaptopsSlider(){
-    const {isLoading, isError, data, error} = useQuery({queryKey: ['exclusives'], queryFn: getSeveralLaptops})
+export function ComponentsSlider(){
+    const {isLoading, isError, data, error} = useQuery({queryKey: ['components'], queryFn: getSeveralComponents})
 
     if(isLoading){
       return <p>Loading...</p>

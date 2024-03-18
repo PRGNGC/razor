@@ -1,1 +1,1 @@
-export { LaptopsTitle } from './ui'
+export { ConsoleTitle } from './ui'

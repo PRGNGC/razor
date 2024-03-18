@@ -28,8 +28,8 @@ export function ItemCard({deviceInfo}){
             </div>
             <div className={styles.deviceMainInfo}>
                 <div className={styles.devicePrices}>
-                    <p className={styles.actualPrice}>{deviceInfo.deviceActualPrice}</p>
-                    {deviceInfo.deviceOldPrice && <p className={styles.oldPrice}>{deviceInfo.deviceOldPrice}</p>}
+                    <p className={styles.actualPrice}>${deviceInfo.deviceActualPrice}</p>
+                    {deviceInfo.deviceOldPrice && <p className={styles.oldPrice}>${deviceInfo.deviceOldPrice}</p>}
                 </div>
                 <ButtonLink color='green'>BUY</ButtonLink>
             </div>

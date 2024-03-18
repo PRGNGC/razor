@@ -1,13 +1,13 @@
 import styles from './styles.module.scss'
-import { LaptopsTitle } from "./laptops-title/ui"
-import { LaptopsSlider } from './laptops-slider'
+import { MiceTitle } from "./mice-title/ui"
+import { MiceSlider } from './mice-slider'
 
-export function LaptopsBlock(){
+export function MiceBlock(){
     return(
-        <section className={styles.laptops}>
+        <section className={styles.mice}>
             <div className={styles.container}>
-                <LaptopsTitle></LaptopsTitle>
-                <LaptopsSlider></LaptopsSlider>
+                <MiceTitle></MiceTitle>
+                <MiceSlider></MiceSlider>
             </div>
         </section>
     )

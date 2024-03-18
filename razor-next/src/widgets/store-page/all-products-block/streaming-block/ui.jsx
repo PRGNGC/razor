@@ -1,13 +1,13 @@
 import styles from './styles.module.scss'
-import { LaptopsTitle } from "./laptops-title/ui"
-import { LaptopsSlider } from './laptops-slider'
+import { StreamingTitle } from "./streaming-title/ui"
+import { StreamingSlider } from './streaming-slider'
 
-export function LaptopsBlock(){
+export function StreamingBlock(){
     return(
-        <section className={styles.laptops}>
+        <section className={styles.streaming}>
             <div className={styles.container}>
-                <LaptopsTitle></LaptopsTitle>
-                <LaptopsSlider></LaptopsSlider>
+                <StreamingTitle></StreamingTitle>
+                <StreamingSlider></StreamingSlider>
             </div>
         </section>
     )
