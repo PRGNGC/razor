@@ -1,19 +1,20 @@
-'use client'
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import styles from './styles.module.scss'
 import { useQuery } from '@tanstack/react-query'
 import { getAllCategoryProducts } from './api'
-import { CategoryContext } from '@/pages/all-products/ui'
 import { ItemCard } from '@/entities/item-card'
 import { ProductsSorting } from '@/features/products-sorting'
+import { useParams } from 'next/navigation'
+import { Loader } from '@/shared/ui/loader'
 
 export function ProductsBlock({filters, category}){
-    // const {currentCategory, setCurrentCategory} = useContext(CategoryContext);
     const [triage, setTriage] = useState("Newest");
-
+    const [page, setPage] = useState(1);
+    const params = useParams();
+    // console.log(params)
 
     // const {isLoading, isError, data, error} = useQuery({queryKey: ['products', currentCategory, filters], queryFn: () => getAllCategoryProducts})
-    const { isLoading, isError, data, error } = useQuery({ queryKey: ['products', category, filters], queryFn: () => getAllCategoryProducts(category, filters)})
+    const { isLoading, isError, data, error } = useQuery({ queryKey: ['products', category, filters, page], queryFn: () => getAllCategoryProducts(category, filters, page)})
     // const { isLoading, isError, data, error } = useQuery({ queryKey: ['products', category], queryFn: () => getAllCategoryProducts(category)})
 
     if(isLoading){
@@ -27,33 +28,40 @@ export function ProductsBlock({filters, category}){
     switch(triage){
         case "Cheapest":
         {
-            data.sort((a, b) => a.deviceActualPrice - b.deviceActualPrice);
+            data.data.sort((a, b) => a.deviceActualPrice - b.deviceActualPrice);
             break;
         }
     case "Most Expensive":
         {
-            data.sort((a, b) => b.deviceActualPrice - a.deviceActualPrice);
+            data.data.sort((a, b) => b.deviceActualPrice - a.deviceActualPrice);
             break;
         }
     }   
 
+    // console.log(data)
+
     return(
-        <div className={styles.productsContainer}>
-            <div className={styles.additionalInfo}>
-                <div className={styles.productsSort}>
-                    <ProductsSorting sortSetter={setTriage}/>
+        <>
+            {/* {isLoading && <p>Loading...</p>}
+            {isError && <p>{error.message}</p>} */}
+            <div className={styles.productsContainer}>
+                <div className={styles.additionalInfo}>
+                    <div className={styles.productsSort}>
+                        <ProductsSorting sortSetter={setTriage}/>
+                    </div>
+                    <p className={styles.productsCount}>{data?.data?.length} products</p>
                 </div>
-                <p className={styles.productsCount}>{data?.length} products</p>
+                <div className={styles.productsBlock}>
+                    {
+                        data?.data?.map(i => {
+                            return(
+                                <ItemCard productRoute={`/store/${params.slug}/${i.deviceId}`} key={crypto.randomUUID()} deviceInfo={i}></ItemCard>
+                                )
+                            })
+                        }
+                </div>
+                {/* <Loader></Loader> */}
             </div>
-            <div className={styles.productsBlock}>
-                {
-                    data?.map(i => {
-                        return(
-                            <ItemCard key={crypto.randomUUID()} deviceInfo={i}></ItemCard>
-                            )
-                        })
-                    }
-            </div>
-        </div>
+        </>
     )
 }

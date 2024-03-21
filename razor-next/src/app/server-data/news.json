@@ -748,7 +748,8 @@
             "deviceOldPrice": "", 
             "size": "Full Size",
             "switchesKeys": "Clicky Optical (Purple)",
-            "productFamily": "Razer Huntsman"
+            "productFamily": "Razer Huntsman",
+            "deviceId": 1
         },
         {
             "deviceType": "KEYBOARDS",
@@ -765,7 +766,8 @@
             "deviceOldPrice": "",
             "size": "Full Size",
             "switchesKeys": "Clicky Optical (Purple)",
-            "productFamily": "Razer Huntsman"
+            "productFamily": "Razer Huntsman",
+            "deviceId": 2
         },
         {
             "deviceType": "KEYBOARDS",
@@ -782,7 +784,8 @@
             "deviceOldPrice": "",
             "size": "Full Size",
             "switchesKeys": "Clicky Optical (Purple)",
-            "productFamily": "Razer Huntsman"
+            "productFamily": "Razer Huntsman",
+            "deviceId": 3
         },
         {
             "deviceType": "KEYBOARDS",
@@ -799,7 +802,8 @@
             "deviceOldPrice": "229.99",
             "size": "Full Size",
             "switchesKeys": "Clicky Optical (Purple)",
-            "productFamily": "Razer Huntsman"
+            "productFamily": "Razer Huntsman",
+            "deviceId": 4
         },
         {
             "deviceType": "KEYBOARDS",
@@ -816,7 +820,8 @@
             "deviceOldPrice": "", 
             "size": "Full Size",
             "switchesKeys": "Clicky Optical (Purple)",
-            "productFamily": "Razer Huntsman"
+            "productFamily": "Razer Huntsman",
+            "deviceId": 5
         },
         {
             "deviceType": "KEYBOARDS",
@@ -833,7 +838,8 @@
             "deviceOldPrice": "",
             "size": "Full Size",
             "switchesKeys": "Clicky Optical (Purple)",
-            "productFamily": "Razer Huntsman"
+            "productFamily": "Razer Huntsman",
+            "deviceId": 6
         },
         {
             "deviceType": "KEYBOARDS",
@@ -850,7 +856,8 @@
             "deviceOldPrice": "",
             "size": "Full Size",
             "switchesKeys": "Clicky Optical (Purple)",
-            "productFamily": "Razer Huntsman"
+            "productFamily": "Razer Huntsman",
+            "deviceId": 7
         },
         {
             "deviceType": "KEYBOARDS",
@@ -867,7 +874,8 @@
             "deviceOldPrice": "229.99",
             "size": "Full Size",
             "switchesKeys": "Clicky Optical (Purple)",
-            "productFamily": "Razer Huntsman"
+            "productFamily": "Razer Huntsman",
+            "deviceId": 8
         },
         {
             "deviceType": "KEYBOARDS",
@@ -884,7 +892,8 @@
             "deviceOldPrice": "", 
             "size": "Full Size",
             "switchesKeys": "Clicky Optical (Purple)",
-            "productFamily": "Razer Huntsman"
+            "productFamily": "Razer Huntsman",
+            "deviceId": 9
         },
         {
             "deviceType": "KEYBOARDS",
@@ -901,7 +910,8 @@
             "deviceOldPrice": "",
             "size": "Full Size",
             "switchesKeys": "Clicky Optical (Purple)",
-            "productFamily": "Razer Huntsman"
+            "productFamily": "Razer Huntsman",
+            "deviceId": 10
         }
     ],
     "audio": [

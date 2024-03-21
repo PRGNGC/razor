@@ -1,11 +1,6 @@
-'use client'
 import styles from './styles.module.scss'
 import { getFilters, getAllCategoryProducts } from './api'
 import { useQuery } from '@tanstack/react-query'
-import { useContext } from 'react'
-import { CategoryContext } from '@/pages/all-products/ui'
-import { getProductsAmount } from './model/getProductsAmount'
-import { useCallback } from 'react'
 
 function formString(filter){
     let filterArr = filter.toLowerCase().split('')
@@ -13,34 +8,23 @@ function formString(filter){
 
     for(let i = 0; i <= filterArr.length; i++){
         if(deviders.includes(filterArr[i])) filterArr[i+1] = filterArr[i+1].toUpperCase()
-        // if(filterArr[i] == " ") filterArr[i+1] = filterArr[i+1].toUpperCase()
     }
-    // console.log(filterArr)
     
     let newStr = filterArr.join('')
-
-        //    newStr.replace(" ", '');
    
     for(let i = 0; i <= deviders.length; i++){
         newStr = newStr.replace(deviders[i], '');
     }
-
-    // console.log(newStr)
-    // console.log(newStr.replace(" ", ''))
 
     return newStr
 }
 
 export function Filter({ filters,  filtersSetter }){
 
-    const {currentCategory, setCurrentCategory} = useContext(CategoryContext);
-
     let cat = "keyboards"
 
     const {isLoading, isError, data, error} = useQuery({queryKey: ['filters', cat], queryFn: () => getFilters(cat)})
     
-    // const {isPending, isErr, products, err} = useQuery({queryKey: ['prod', currentCategory], queryFn: () => getAllCategoryProducts(currentCategory)})
-
     if(isLoading){
         return <p>Loading...</p>
     }

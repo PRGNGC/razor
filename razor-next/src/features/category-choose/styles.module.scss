@@ -15,17 +15,9 @@
         border: 1px solid $gray;
         border-radius: 10px;
         width: fit-content;
+        cursor: pointer;
         .categoryName{
             @include oswald-text(18, $gray, 15, bold);
-        }
-        input{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            cursor: pointer;
         }
         .cross{
             display: none;
@@ -42,14 +34,6 @@
         background-color: $primary;
         .selectedCategoryName{
             @include oswald-text(18, $secondary , 15, bold);
-        }
-        input{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
         }
         .selectedCross{
             display: block;

@@ -4,7 +4,7 @@ import { ButtonLink } from '@/shared/ui/button-link'
 import Image from 'next/image'
 import star from '@/shared/ui/icon/assets/star.svg'
 
-export function ItemCard({deviceInfo}){
+export function ItemCard({deviceInfo, productRoute}){
     return(
         <div className={styles.deviceCard}>
             <div className={styles.commonInfo}>
@@ -31,7 +31,7 @@ export function ItemCard({deviceInfo}){
                     <p className={styles.actualPrice}>${deviceInfo.deviceActualPrice}</p>
                     {deviceInfo.deviceOldPrice && <p className={styles.oldPrice}>${deviceInfo.deviceOldPrice}</p>}
                 </div>
-                <ButtonLink color='green'>BUY</ButtonLink>
+                <ButtonLink element={productRoute} color='green'>BUY</ButtonLink>
             </div>
         </div>
     )

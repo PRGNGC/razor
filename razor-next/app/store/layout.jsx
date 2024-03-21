@@ -29,7 +29,7 @@ export const CategoryContext = createContext('Category');
   return (
       <>
         {/* <CategoryContext.Provider value={{currentCategory, setCurrentCategory}}> */}
-            <Categories></Categories>
+            {params.product == undefined && <Categories></Categories> }
             {children}
         {/* </ CategoryContext.Provider> */}
     </>

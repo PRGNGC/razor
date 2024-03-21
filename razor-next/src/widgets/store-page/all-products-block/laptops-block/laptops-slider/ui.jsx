@@ -1,15 +1,16 @@
-'use client'
 import styles from './styles.module.scss'
 import { SliderTemplate } from '@/features/slider'
 import { useQuery } from '@tanstack/react-query'
 import { getSeveralLaptops } from './api'
 import { ItemCard } from '@/entities/item-card'
+import { Loader } from '@/shared/ui/loader'
 
 export function LaptopsSlider(){
     const {isLoading, isError, data, error} = useQuery({queryKey: ['laptops'], queryFn: getSeveralLaptops})
 
     if(isLoading){
-      return <p>Loading...</p>
+      return <Loader></Loader>
+      // return <p>Loading...</p>
     }
     
     if(isError){

@@ -1,16 +1,15 @@
 import { CommonAxios } from "@/shared/api";
 import axios from "axios";
 
-async function getAllCategoryProducts(category: string, filters: URLSearchParams){
-    // const response = await CommonAxios.get(category);
-    // const response = await axios.get('http://localhost:8000/keyboards?size=Tenkeyless:switchesKeys=Linear+Optical+%28Red%29');
-    // const response = await CommonAxios.get(`${category}?size=Tenkeyless&switchesKeys=Clicky+Optical+%28Purple%29`);
-    const response = await CommonAxios.get(`${category}?${filters}`);
-    // const response = await CommonAxios.get("keyboards", {params: {
-    //     size: "Tenkeyless",
-    //     productFamily: "Razer Turret"
-    // }});
-    return response.data
+async function getAllCategoryProducts(category: string, filters: URLSearchParams, page: number){
+    // const response = await CommonAxios.get(`gear?_beign=2&_end=4`);
+    let elementsPerPage = 5;
+    let lastElement = page * elementsPerPage;
+    let firstElement = lastElement - elementsPerPage;
+
+    const response = await CommonAxios.get(`${category}?_start=${firstElement}&_end=${lastElement}${filters}`);
+    // const response = fetch('http://localhost:8000?page=' + page).then((res) => res.json())
+    return response
 }
 
 export { getAllCategoryProducts }

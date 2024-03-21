@@ -4,7 +4,7 @@ import { ButtonLink } from "@/shared/ui/button-link"
 export function ComponentsTitle(){
     return(
         <BlockTitle header='PC COMPONENTS' text='BUILD THE PERFECT GAMING RIG FROM OUR SELECTION OF TOP-SHELF PC PARTS'>
-            <ButtonLink color='white'>SEE ALL</ButtonLink>
+            <ButtonLink element='/store/components' color='white'>SEE ALL</ButtonLink>
         </BlockTitle>
     )
 }

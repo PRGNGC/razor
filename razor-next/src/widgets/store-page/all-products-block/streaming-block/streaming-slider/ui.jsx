@@ -1,4 +1,3 @@
-'use client'
 import styles from './styles.module.scss'
 import { SliderTemplate } from '@/features/slider'
 import { useQuery } from '@tanstack/react-query'

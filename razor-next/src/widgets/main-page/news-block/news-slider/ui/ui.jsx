@@ -4,11 +4,13 @@ import styles from './styles.module.scss'
 import Link from "next/link";
 import { getNews } from "../api";
 import { useQuery } from "@tanstack/react-query";
+import { Loader } from "@/shared/ui/loader";
 
 export function NewsSlider(){
     const { isPending, isError, data, error } = useQuery({ queryKey: ['news'], queryFn: getNews})
 
     if(isPending){
+        // return(<Loader/>);
         return(<p>loading...</p>);
     }
     if(isError){

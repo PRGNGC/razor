@@ -4,7 +4,7 @@ import { ButtonLink } from "@/shared/ui/button-link"
 export function MiceTitle(){
     return(
         <BlockTitle header='GAMING MICE' text='HIGH-PERFORMANCE WIRED AND WIRELESS MICE MADE FOR EVERY GAMER`S HAND'>
-            <ButtonLink color='white'>SEE ALL</ButtonLink>
+            <ButtonLink element='/store/mice' color='white'>SEE ALL</ButtonLink>
         </BlockTitle>
     )
 }

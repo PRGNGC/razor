@@ -1,3 +1,4 @@
+'use client'
 import styles from './styles.module.scss'
 import { LaptopsBlock } from './laptops-block'
 import { KeyboardsBlock } from './keyboards-block'
@@ -14,7 +15,6 @@ import { WatchBanner } from './watch-banner'
 import { HeadphoneBanner } from './headphone-banner'
 import { MouseBanner } from './mouse-banner'
 import { ManBanner } from './man-banner'
-
 
 export function AllProducts(){
     return(

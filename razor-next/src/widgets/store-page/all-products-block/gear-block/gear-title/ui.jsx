@@ -4,7 +4,7 @@ import { ButtonLink } from "@/shared/ui/button-link"
 export function GearTitle(){
     return(
         <BlockTitle header='GEAR' text='LIFESTYLE ACCESSORIES AND APPAREL FOR THE GAMING COMMUNITY'>
-            <ButtonLink color='white'>SEE ALL</ButtonLink>
+            <ButtonLink element='/store/gear' color='white'>SEE ALL</ButtonLink>
         </BlockTitle>
     )
 }

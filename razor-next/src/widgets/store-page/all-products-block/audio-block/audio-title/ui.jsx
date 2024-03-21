@@ -4,7 +4,7 @@ import { ButtonLink } from "@/shared/ui/button-link"
 export function AudioTitle(){
     return(
         <BlockTitle header='GAMING AUDIO' text='EXPLORE RAZER HEADSETS, WIRELESS HEADPHONES, EARPHONES FOR GAMING & BROADCASTING RAZER SPEAKERS'>
-            <ButtonLink color='white'>SEE ALL</ButtonLink>
+            <ButtonLink element='/store/audio' color='white'>SEE ALL</ButtonLink>
         </BlockTitle>
     )
 }

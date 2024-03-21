@@ -1,5 +1,8 @@
+import { IndividualProductPage } from "@/widgets/store-page/individual-product-page"
+
 export default function ProductPage({params}){
     return(
-        <p>Товар - {params.product}</p>
+        <IndividualProductPage/>
+        // <p>Товар - {params.product}</p>
     )
 }
