@@ -4,7 +4,7 @@ import { ButtonLink } from "@/shared/ui/button-link"
 export function NewsTitle(){
     return(
         <BlockTitle header='RAZER`s News' text='There is no better place to buy the latest Razer gear than here at our official online store'>
-            <ButtonLink color='white'>SEE ALL</ButtonLink>
+            <ButtonLink element='' color='white'>SEE ALL</ButtonLink>
         </BlockTitle>
     )
 }

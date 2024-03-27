@@ -4,7 +4,7 @@ import { ButtonLink } from "@/shared/ui/button-link"
 export function ExcTitle(){
     return(
         <BlockTitle header='RAZER EXCLUSIVES' text='Explore unique products only available at our official online store'>
-            <ButtonLink color='white'>SEE ALL</ButtonLink>
+            <ButtonLink element="" color='white'>SEE ALL</ButtonLink>
         </BlockTitle>
     )
 }

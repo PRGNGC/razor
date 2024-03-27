@@ -2,7 +2,7 @@
 
 .deviceCard{
     background-color: $dark;
-    width: fit-content;
+    width: 362px;
     padding: 20px;
     border-radius: 20px;
     max-width: 362px;
@@ -87,6 +87,16 @@
                 @include manrope-text(18, $gray, 400);
                 text-decoration: line-through;
             }
+        }
+        form{
+            button{
+                outline: none;
+            }
+        }
+
+        .cartCard{
+            filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+            cursor: pointer;
         }
     }
 }

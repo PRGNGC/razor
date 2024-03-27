@@ -5,6 +5,12 @@ import { SliderTemplate } from '@/features/slider'
 import { useQuery } from '@tanstack/react-query'
 import { getAdvertisements } from './api'
 
+interface AdvertisementType {
+    advTitle: string,
+    advText: string,
+    advImg: string,
+}
+
 export function AdvBlock(){
     const { isLoading, isError, data, error } = useQuery({ queryKey: ['advertisements'], queryFn: getAdvertisements})
 
@@ -35,7 +41,7 @@ export function AdvBlock(){
                           ]
                     }}>
                         {
-                            data?.map(i => {
+                            data?.map((i: AdvertisementType) => {
                                 return(
                                 <div key={crypto.randomUUID()} className='advertisement' style={{backgroundImage: 'url("' + i.advImg + '")'}}>
                                     <img className='advImg' src={i.advImg} alt={i.advTitle} />
@@ -44,7 +50,7 @@ export function AdvBlock(){
                                         <hr />
                                         <p className='advText'>{i.advText}</p>
                                     </div>
-                                    <ButtonLink color='green'>SHOP NOW</ButtonLink>
+                                    <ButtonLink element='' color='green'>SHOP NOW</ButtonLink>
 
                                 </div>)
                             })

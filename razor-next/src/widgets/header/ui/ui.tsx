@@ -5,6 +5,7 @@ import { ShoppingCart } from './shopping-cart/ui'
 import { MenuBurgerIcon } from '../../../features/header/burger/ui'
 import { SearchField } from '@/features/header/search-field/ui'
 import { MenuBurger } from './menu/ui'
+import { memo } from 'react';
 
 export function Header(){
     return(

@@ -1,22 +1,52 @@
 'use client'
 import styles from './styles.module.scss'
 import './cssForMap.scss'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import { useMap } from 'react-leaflet'
-import { Icon } from 'leaflet'
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import "leaflet/dist/leaflet.css";
 import { useState, useEffect } from 'react'
 import { getStores } from '../api'
+import { LatLngTuple, Icon } from 'leaflet'
 import { useQuery } from '@tanstack/react-query'
 
-function LocationSetter({location}) {
+interface LocationType {
+  latitude: number,
+  longitude: number,
+  zoom: number
+}
+
+interface StoreType{
+  storeImg: string,
+  storeTitle: string,
+  storeText: string,
+  storeLocationLatitude: number,
+  storeLocationLongitude: number,
+  storeCountry: string
+}
+
+interface CountryType {
+  value: string;
+  label: string;
+  latitude: number;
+  longitude: number;
+  zoom: number;
+}
+
+interface MapLoactionProps {
+  country: CountryType
+}
+
+interface LocationSetterProps {
+  location: LocationType
+}
+
+function LocationSetter({location}: LocationSetterProps) {
     const map = useMap();
     map.setView([location.latitude, location.longitude], location.zoom)
     return null
   }
 
-  export function LocationMap({country}){
-  const [activeMarker, setActiveMarker] = useState(null);
+  export function LocationMap({country}: MapLoactionProps){
+  const [activeMarker, setActiveMarker] = useState<StoreType | null>(null);
     const storeIcon = new Icon({
         iconUrl: '/icons/map-marker.svg',
         iconSize: [25, 25]
@@ -32,23 +62,10 @@ function LocationSetter({location}) {
       return <p>{error.message}</p>
     }
 
-
-    // const [stores, setStores] = useState([]);
-
-    // async function FetchData(){
-    //   const response = await getStores();
-    //   setStores(response)
-    // }
-
-    // useEffect(() => {
-    //   FetchData();
-    // }, [])
-
-    let mapCenter = [country.latitude, country.longitude];
+    let mapCenter: LatLngTuple = [country.latitude, country.longitude];
 
     return(
         <div className={styles.mapContainer}>
-        {/* <MapContainer > */}
         <MapContainer center={mapCenter} zoom={4}>
           <LocationSetter location={country}/>
           <TileLayer
@@ -56,7 +73,7 @@ function LocationSetter({location}) {
             url = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
           />
             {
-              data?.map(store => {
+              data?.map((store: StoreType) => {
                 return(
                   <div key={crypto.randomUUID()}>
                     <Marker
@@ -67,8 +84,11 @@ function LocationSetter({location}) {
                     { activeMarker && (
                         <Popup
                           key={crypto.randomUUID()}
-                          closeOnClick={()=>{ setActiveMarker(null) }}
-                          closeOnEscapeKey={()=>{ setActiveMarker(null) }}
+                          closeOnClick={true}
+                          // closeOnClick={()=>{ setActiveMarker(null) }}
+                          eventHandlers={{click: ()=>{ setActiveMarker(null) }}}
+                          closeOnEscapeKey = {true}
+                          // closeOnEscapeKey={()=>{ setActiveMarker(null) }}
                           position={ [activeMarker.storeLocationLatitude, activeMarker.storeLocationLongitude] }
                         >
                           <div className={styles.popupContainer}>

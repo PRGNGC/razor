@@ -1,0 +1,53 @@
+@import '@/app/common.scss';
+
+.cartContent{
+    margin-top: 40px;
+    .container{
+        max-width: 1520px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+        .product{
+            .productCounter{
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 10px;
+                margin-top: 10px;
+                background-color: $dark;
+                .counterIncrement{
+                    @include oswald-text(50, $white, 15, bold);
+                    background-color: $secondary;
+                    padding-left: 10px;
+                    padding-right: 3px;
+                    display: flex;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    user-select: none;
+                }
+                .counterValue{
+                    @include oswald-text(30, $white, 15, 400);
+                    padding-left: 10px;
+                    padding-right: 3px;
+                    display: flex;
+                    border-radius: 10px;                   
+                }
+                .counterDecrement{
+                    @include oswald-text(50, $white, 15, bold);
+                    background-color: $secondary;
+                    padding-left: 10px;
+                    padding-right: 3px;
+                    display: flex;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    user-select: none;
+
+                }
+            }
+        }
+    }
+}

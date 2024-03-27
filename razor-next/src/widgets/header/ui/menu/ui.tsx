@@ -7,7 +7,7 @@ import { SearchField } from '@/features/header/search-field/ui'
 import { useDispatch, useSelector } from 'react-redux'
 import { menuToggle } from '@/features/store/menu/menuSlice'
 
-export function MenuBurger({clickHandler}){
+export function MenuBurger(){
     const menu = useSelector((state) => state.menuReducer.value);
     const dispatch = useDispatch();
 
@@ -54,7 +54,7 @@ export function MenuBurger({clickHandler}){
             <Image src='/icons/razor-label.svg' alt='razor-label'  width={50} height={50} onClick={() => dispatch(menuToggle())} />
             <figcaption>Razer Inc.</figcaption>
 
-            <Link href='/'>
+            <Link href='/cart'>
                 <Image src='/icons/shopping-cart.svg' alt='shopping-cart'  width={24} height={24} onClick={() => dispatch(menuToggle())} />
             </Link>
         </div>

@@ -1,6 +1,10 @@
 import styles from './styles.module.scss'
 import { getFilters, getAllCategoryProducts } from './api'
 import { useQuery } from '@tanstack/react-query'
+import { useState } from 'react'
+import { useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 function formString(filter){
     let filterArr = filter.toLowerCase().split('')
@@ -20,6 +24,11 @@ function formString(filter){
 }
 
 export function Filter({ filters,  filtersSetter }){
+    const [selectedFilters, setSelectedFilters] = useState([]);
+    const searchParams = useSearchParams();
+    const router = useRouter();
+    const editableSearchParams = new URLSearchParams(searchParams.toString());
+    console.log("Just formed editable serach params - " + editableSearchParams);
 
     let cat = "keyboards"
 
@@ -33,33 +42,34 @@ export function Filter({ filters,  filtersSetter }){
         return <p>{error.message}</p>
     }
 
-    // if(isPending){
-    //     return <p>Pending...</p>
-    // }
-    
-    // if(isErr){
-    //     return <p>{err.message}</p>
-    // }
-
-
     return(
         <div className={styles.filtersBlock}>
             <div className={styles.appliedFiltersBlock}>
                 <div className={styles.appliedFiltersHeader}>
                     <p className={styles.appliedFiltersTitle}>Applied Filters</p>
-                    <p className={styles.appliedFiltersNullify}>Clear All</p>
+                    <p className={styles.appliedFiltersNullify} onClick={ () => setSelectedFilters([])}>Clear All</p>
                 </div>
-                {
-                    filters.map(i => {
-                        return(
+                <div className={styles.appliedFiltersList}>
 
-                            <label key={crypto.randomUUID()} htmlFor={i.value} className={styles.filterCategoryOption}>
-                                                    <input type="checkbox" id={i.value} />
-                                                    {i.value}
-                                                </label>
+                {
+                    selectedFilters.map(i => {
+                        return(
+                            <div key={crypto.randomUUID()} className={styles.selectedFilter}>
+                                <p className={styles.selectedFilterName}>{i}</p>
+                                <Image 
+                                    src='/icons/green-cross.svg' 
+                                    alt='cross'
+                                    className={styles.deleteAppliedFilter} 
+                                    width={24} 
+                                    height={24}  
+                                    onClick={ () => { setSelectedFilters((prev) => prev.filter(j => j != i)) } }
+                                    
+                                />
+                            </div>
                         )
                     })
                 }
+                </div>
             </div>
 
             <div className={styles.filters}>
@@ -73,18 +83,21 @@ export function Filter({ filters,  filtersSetter }){
                                         j.possibleValues.map(i => {
                                             return(
                                                 <label key={crypto.randomUUID()} htmlFor={i} className={styles.filterCategoryOption}>
-                                                    <input type="checkbox" id={i} 
-                                                        // onClick={() => filtersSetter((prev) => [...prev, {filter: formString(j.filterName), value: i}])}
-                                                        onClick={() => filtersSetter((prev) => [...prev, {filter: formString(j.filterName), value: i}])}
+                                                    <input type="checkbox" defaultChecked={selectedFilters.includes(i)} id={i} 
+                                                        onClick={() => setSelectedFilters((prev) => {
+                                                            if(!prev.includes(i)) { 
+                                                                editableSearchParams.append(j.filterName, i)
+                                                                console.log("Updated search params - " + editableSearchParams);
+                                                                router.push(`/store/keyboards?${editableSearchParams}`);
+                                                                return [...prev, i] 
+                                                            }
+                                                            if(prev.includes(i)) { 
+                                                                router.push(`/store/keyboards?${editableSearchParams.delete(j.filterName)}`);
+                                                                return prev.filter(j => j != i) 
+                                                            }
+                                                        })}
                                                     />
                                                     {i}
-                                                    
-                                                    {/* {console.log(formString(j.filterName))} */}
-                                                    {/* {console.log( j.filterName.toLowerCase().replace(' ', '') )} */}
-                                                    {/* {getProductsAmount(j.filterName, products)} */}
-                                                    {/* {products?.reduce((currentSum, currentNumber) => {
-                                                        if(currentNumber.a == i) currentSum++
-                                                    }, 0)} */}
                                                 </label>
                                                 )
                                             })

@@ -7,7 +7,8 @@ async function getAllCategoryProducts(category: string, filters: URLSearchParams
     let lastElement = page * elementsPerPage;
     let firstElement = lastElement - elementsPerPage;
 
-    const response = await CommonAxios.get(`${category}?_start=${firstElement}&_end=${lastElement}${filters}`);
+    // const response = await CommonAxios.get(`${category}?_start=${firstElement}&_end=${lastElement}${filters}`);
+    const response = await CommonAxios.get(`${category}`);
     // const response = fetch('http://localhost:8000?page=' + page).then((res) => res.json())
     return response
 }

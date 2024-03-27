@@ -1,6 +1,7 @@
 import styles from './styles.module.scss'
+import { memo } from 'react'
 
-export function SubscriptionForm(){
+const SubscriptionForm = memo(() => {
     return(
         <div className={styles.subscribeForm}>
         <h1 className={styles.subscribeFormTitle}>Here’s $10 Off* to Get You Started</h1>
@@ -12,4 +13,6 @@ export function SubscriptionForm(){
         <p className={styles.formDisclaimer}>*Offer is valid with a minimum purchase of $99.</p>
     </div>
     )
-}
+})
+
+export { SubscriptionForm }

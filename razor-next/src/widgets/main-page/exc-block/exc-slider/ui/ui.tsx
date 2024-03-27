@@ -4,8 +4,23 @@ import { SliderTemplate } from '@/features/slider/ui'
 import { ItemCard } from '@/entities/item-card';
 import { useQuery } from '@tanstack/react-query';
 
+interface ExclusivesType {
+  deviceId: string, 
+  deviceType: string,
+  deviceAddInfo: string,
+  devicePriceOff: boolean,
+  deviceExclusive: boolean,
+  deviceNew: boolean,
+  deviceOtherInfo: boolean,
+  deviceImg: string,
+  deviceRating: string,
+  deviceReviewsCount: string,
+  deviceTitle: string,
+  deviceActualPrice: string,
+  deviceOldPrice: string
+} 
+
 export function ExcSlider(){
-  
   const {isLoading, isError, data, error} = useQuery({queryKey: ['exclusives'], queryFn: getExclusives})
 
   if(isLoading){
@@ -47,7 +62,7 @@ export function ExcSlider(){
               ]
         }}>
             {
-                data?.map(i => <ItemCard key={crypto.randomUUID()} deviceInfo={i}></ItemCard>)
+                data?.map((i: ExclusivesType) => <ItemCard productRoute='' key={crypto.randomUUID()} deviceInfo={i}></ItemCard>)
             }
         </SliderTemplate>
     )

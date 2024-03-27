@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export function ShoppingCart(){
     return(
-        <Link href='/'>
+        <Link href='/cart'>
             <Image 
                 src='/icons/shopping-cart.svg'
                 alt='shopping-cart'

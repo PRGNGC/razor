@@ -6,6 +6,14 @@ import { getNews } from "../api";
 import { useQuery } from "@tanstack/react-query";
 import { Loader } from "@/shared/ui/loader";
 
+interface NewsType {
+    title: string,
+    text: string,
+    type: string,
+    img: string,
+    size: number,
+}
+
 export function NewsSlider(){
     const { isPending, isError, data, error } = useQuery({ queryKey: ['news'], queryFn: getNews})
 
@@ -18,7 +26,7 @@ export function NewsSlider(){
     }
 
     const maxCapacity = 4;
-    let pagesCount = new Array(Math.ceil(data?.reduce((sum, current) => sum + current.size, 0) / maxCapacity)).fill(1);
+    let pagesCount = new Array(Math.ceil(data?.reduce((sum: number, current: NewsType) => sum + current.size, 0) / maxCapacity)).fill(1);
     let currentLoading = 0;
     let nextNew = 0;
 
@@ -28,7 +36,7 @@ export function NewsSlider(){
                 <div className={styles.newsBlockContent}>
                     <div className={styles.smallSlider}>
                         {
-                            data?.map(i => {
+                            data?.map((i: NewsType) => {
                                 return(
                                     <div key={crypto.randomUUID()} className={styles.newCard} style={{backgroundImage: 'url(' + i.img + ')'}}> 
                                         <Link href='/' className={styles.cardLink} />
@@ -65,7 +73,7 @@ export function NewsSlider(){
                                     currentLoading = 0;
                                     return(
                                     <div key={crypto.randomUUID()} className={styles.newsSlider}>   
-                                        {data?.map((i, index) => {
+                                        {data?.map((i: NewsType, index: number) => {
                                             if(maxCapacity <= currentLoading) return;
                                             if(index >= nextNew){
                                                 if(currentLoading + i.size > maxCapacity) return;

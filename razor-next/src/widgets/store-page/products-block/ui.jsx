@@ -6,12 +6,14 @@ import { ItemCard } from '@/entities/item-card'
 import { ProductsSorting } from '@/features/products-sorting'
 import { useParams } from 'next/navigation'
 import { Loader } from '@/shared/ui/loader'
+import { useSearchParams } from 'next/navigation'
 
 export function ProductsBlock({filters, category}){
     const [triage, setTriage] = useState("Newest");
     const [page, setPage] = useState(1);
     const params = useParams();
-    // console.log(params)
+    const searchParams = useSearchParams();
+    
 
     // const {isLoading, isError, data, error} = useQuery({queryKey: ['products', currentCategory, filters], queryFn: () => getAllCategoryProducts})
     const { isLoading, isError, data, error } = useQuery({ queryKey: ['products', category, filters, page], queryFn: () => getAllCategoryProducts(category, filters, page)})
@@ -38,29 +40,43 @@ export function ProductsBlock({filters, category}){
         }
     }   
 
-    // console.log(data)
+
+    let filteredProducts = [];
+
+    if(searchParams.toString() != ''){
+        data?.data?.map(product => {
+            searchParams.forEach(filter => {
+            if( product.size == filter ||
+                product.switchesKeys == filter ||
+                product.productFamily == filter ||
+                product.deviceId == filter
+                ) filteredProducts.push(product)
+            })
+        })
+    }
+    
+    if(searchParams.toString() == ''){
+        filteredProducts = data?.data;
+    }
 
     return(
         <>
-            {/* {isLoading && <p>Loading...</p>}
-            {isError && <p>{error.message}</p>} */}
             <div className={styles.productsContainer}>
                 <div className={styles.additionalInfo}>
                     <div className={styles.productsSort}>
                         <ProductsSorting sortSetter={setTriage}/>
                     </div>
-                    <p className={styles.productsCount}>{data?.data?.length} products</p>
+                    <p className={styles.productsCount}>{filteredProducts.length} products</p>
                 </div>
                 <div className={styles.productsBlock}>
                     {
-                        data?.data?.map(i => {
+                        filteredProducts.map(i => {
                             return(
                                 <ItemCard productRoute={`/store/${params.slug}/${i.deviceId}`} key={crypto.randomUUID()} deviceInfo={i}></ItemCard>
                                 )
                             })
                         }
                 </div>
-                {/* <Loader></Loader> */}
             </div>
         </>
     )

@@ -1,6 +1,13 @@
+import { ReactNode } from 'react'
 import styles from './styles.module.scss'
 
-export function BlockTitle({header, text, children}){
+interface BlockTitleProps {
+    header: string,
+    text: string,
+    children?: ReactNode
+}
+
+export function BlockTitle({header, text, children}: BlockTitleProps){
     return(
         <div className={styles.blockHeader}>
             <div className={styles.blockHeaderText}>

@@ -1,7 +1,14 @@
 import Link from 'next/link'
 import styles from './styles.module.scss'
+import { ReactElement, ReactNode } from 'react';
 
-export function ButtonLink({color, element, children}){
+interface ButtonLinkProps {
+    color: string,
+    element: string,
+    children: ReactNode
+}
+
+export function ButtonLink({color, element, children}: ButtonLinkProps){
     switch(color){
         case 'green':
             return(<Link className={styles.button} href={`${element}`}><div className={styles.greenButton}>{children}</div></Link>)

@@ -4,7 +4,28 @@ import { getStores } from '../location-map/api'
 import { ButtonLink } from '@/shared/ui/button-link'
 import { useQuery } from '@tanstack/react-query'
 
-export function LocationStore({country}){
+interface CountryType {
+  value: string,
+  label: string, 
+  latitude: number, 
+  longitude: number, 
+  zoom: number
+}
+
+interface LocationStoreType {
+  country: CountryType
+}
+
+interface StoreType{
+  storeImg: string,
+  storeTitle: string,
+  storeText: string,
+  storeLocationLatitude: number,
+  storeLocationLongitude: number,
+  storeCountry: string
+}
+
+export function LocationStore({ country }: LocationStoreType){
     
   const {isLoading, isError, data, error} = useQuery({queryKey: ['stores'], queryFn: getStores})
 
@@ -18,14 +39,14 @@ export function LocationStore({country}){
 
     return(
         <div className={styles.storesCards}>
-        {data?.map(store => {
+        {data?.map((store: StoreType) => {
           if(store.storeCountry == country.label){
             return(
               <div key={crypto.randomUUID()} className={styles.storeCardContainer}>
                   <div className={styles.storeImg} style={{backgroundImage: 'url("' + store.storeImg + '")'}}></div>
                   <h2 className={styles.storeTitle}>{store.storeTitle}</h2>
                   <p className={styles.storeText}>{store.storeText}</p>
-                  <ButtonLink color='green'>VISIT STORE</ButtonLink>
+                  <ButtonLink element='' color='green'>VISIT STORE</ButtonLink>
               </div>
             )
           }

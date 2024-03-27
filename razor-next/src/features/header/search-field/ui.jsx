@@ -10,6 +10,7 @@ export function SearchField({fieldType = 'main'}){
                 alt='search-glass'
                 width={18}
                 height={18}
+                style={{width: 'auto', height: 'auto'}}
             />
             <input type="search" id={`searchField ` + fieldType} placeholder='Search' className={styles.searchInput}/>
         </label>
